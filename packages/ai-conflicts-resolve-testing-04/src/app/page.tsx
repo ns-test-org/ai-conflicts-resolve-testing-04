@@ -1,29 +1,5 @@
 export default function ChristmasLanding() {
   return (
-<<<<<<< HEAD
-    <div className="min-h-screen bg-gradient-to-br from-gray-900 via-gray-800 to-black p-6 flex items-center justify-center">
-      <div className="w-full max-w-2xl bg-gray-800 rounded-2xl shadow-2xl p-8 border border-gray-700">
-        <h1 className="text-4xl font-bold text-white mb-2 text-center">
-          Todo App v2
-        </h1>
-        <p className="text-gray-400 text-center mb-8">
-          {activeTodos} {activeTodos === 1 ? 'task' : 'tasks'} remaining
-        </p>
-
-        {/* Input Section */}
-        <div className="flex gap-2 mb-6">
-          <input
-            type="text"
-            value={inputValue}
-            onChange={(e) => setInputValue(e.target.value)}
-            onKeyPress={handleKeyPress}
-            placeholder="Add a new task..."
-            className="flex-1 px-4 py-3 border-2 border-gray-600 bg-gray-700 rounded-lg focus:outline-none focus:border-purple-500 text-white placeholder-gray-400"
-          />
-          <button
-            onClick={addTodo}
-            className="px-6 py-3 bg-purple-600 text-white rounded-lg font-semibold hover:bg-purple-700 transition-colors"
-=======
     <div className="min-h-screen bg-gradient-to-b from-red-900 via-green-900 to-red-950">
       {/* Snowflakes Background */}
       <div className="fixed inset-0 overflow-hidden pointer-events-none">
@@ -37,7 +13,6 @@ export default function ChristmasLanding() {
               fontSize: `${Math.random() * 20 + 10}px`,
               animationDelay: `${Math.random() * 3}s`,
             }}
->>>>>>> 1528bac (Merge thread: Build Christmas Landing Page)
           >
             ❄
           </div>
@@ -59,53 +34,6 @@ export default function ChristmasLanding() {
           </button>
         </div>
 
-<<<<<<< HEAD
-        {/* Todo List */}
-        <div className="space-y-2">
-          {todos.length === 0 ? (
-            <p className="text-center text-gray-500 py-8">
-              No tasks yet. Add one to get started!
-            </p>
-          ) : (
-            todos.map((todo) => (
-              <div
-                key={todo.id}
-                className="flex items-center gap-3 p-4 bg-gray-700 rounded-lg hover:bg-gray-600 transition-colors group"
-              >
-                <input
-                  type="checkbox"
-                  checked={todo.completed}
-                  onChange={() => toggleTodo(todo.id)}
-                  className="w-5 h-5 cursor-pointer accent-purple-500"
-                />
-                <span
-                  className={`flex-1 text-white ${
-                    todo.completed ? 'line-through text-gray-500' : ''
-                  }`}
-                >
-                  {todo.text}
-                </span>
-                <button
-                  onClick={() => deleteTodo(todo.id)}
-                  className="opacity-0 group-hover:opacity-100 text-red-400 hover:text-red-300 font-semibold transition-opacity"
-                >
-                  Delete
-                </button>
-              </div>
-            ))
-          )}
-        </div>
-
-        {/* Clear Completed */}
-        {todos.some(todo => todo.completed) && (
-          <button
-            onClick={() => setTodos(todos.filter(todo => !todo.completed))}
-            className="mt-6 w-full py-2 text-gray-400 hover:text-red-400 font-medium transition-colors"
-          >
-            Clear completed tasks
-          </button>
-        )}
-=======
         {/* Features Grid */}
         <div className="grid md:grid-cols-3 gap-8 mt-20 max-w-6xl mx-auto">
           <div className="bg-white/10 backdrop-blur-md rounded-2xl p-8 text-center hover:bg-white/20 transition-all transform hover:scale-105">
@@ -158,10 +86,10 @@ export default function ChristmasLanding() {
           <p className="text-lg mb-2">🎄 Happy Holidays from Our Family to Yours 🎄</p>
           <p className="text-sm">© 2024 Christmas Celebration. All rights reserved.</p>
         </div>
->>>>>>> 1528bac (Merge thread: Build Christmas Landing Page)
       </div>
     </div>
   );
 }
+
 
 
